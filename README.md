@@ -2,7 +2,7 @@
 
 Ein intelligentes Tool zur Vereinheitlichung von Datum-Feldern in Obsidian Vault YAML Front Matter.
 
-## 🎯 Problem
+## Problem
 
 Obsidian Vaults enthalten oft verschiedene Datum-Feld-Formate:
 - `creation date: 2025-01-26T19:36:00`
@@ -10,7 +10,7 @@ Obsidian Vaults enthalten oft verschiedene Datum-Feld-Formate:
 - `created_at: "1716650237946"` (Unix timestamp)
 - `modification date: Tuesday 12th September 2023 18:43:02`
 
-## ✅ Lösung
+## Lösung
 
 Vereinheitlichung zu:
 ```yaml
@@ -18,7 +18,7 @@ created_at: 2025-05-27T22:03:00
 updated_at: 2025-06-30T23:11:50
 ```
 
-## 🚀 Features
+## Features
 
 - **Intelligente Fallback-Strategie**: Nutzt Dateisystem-Metadaten wenn YAML-Felder fehlen
 - **Sichere Migration**: Vollständiges Backup & Rollback
@@ -26,7 +26,7 @@ updated_at: 2025-06-30T23:11:50
 - **Edge-Case Handling**: Behandelt problematische Fälle (z.B. Backup-Wiederherstellung)
 - **Makefile**: Einfache Bedienung über `make` Commands
 
-## 📋 Verwendung
+## Verwendung
 
 ```bash
 # Projekt-Setup
@@ -45,7 +45,7 @@ make migrate
 make rollback
 ```
 
-## 📁 Struktur
+## Struktur
 
 ```
 obsidian-date-migration/
@@ -64,21 +64,21 @@ obsidian-date-migration/
     └── sample_files/       # Beispiel-Dateien
 ```
 
-## 🔧 Technische Details
+## Technische Details
 
 - **Zielformat**: `YYYY-MM-DDTHH:MM:SS` (ISO 8601 ohne Timezone)
 - **Fallback-Strategie**: YAML → Dateisystem birth time → modify time
 - **Backup**: Automatisches Git-Backup vor Migration
 - **Logging**: Vollständige Dokumentation aller Änderungen
 
-## 📝 Entwicklung
+## Entwicklung
 
 Dieses Tool entstand aus der Notwendigkeit, ein 2nd Brain (Obsidian Vault) mit 2300+ Markdown-Dateien zu bereinigen und zu vereinheitlichen.
 
-## 🤝 Contributing
+## Contributing
 
 Pull Requests willkommen! Bitte teste gründlich mit eigenen Daten.
 
-## 📄 Lizenz
+## Lizenz
 
 MIT License - Siehe LICENSE Datei.
